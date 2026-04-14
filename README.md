@@ -58,7 +58,7 @@ Support Server: https://discord.gg/
 Email: contact@llegonetwork.dev
 
 ## Legal
-License: https://LegoLandon7/StatsBot/LICENSE
+License: https://github.com/LegoLandon7/StatsBot/LICENSE
 
 Terms of Service: https://llegonetwork.dev/tos
 
