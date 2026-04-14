@@ -47,18 +47,18 @@ npm run dev
 ```
 
 #### `npm run dev` will deploy commands as well
-#### use 'npm start` to start the bot normally
+#### use `npm start` to start the bot normally
 
 ## Contact
 
-Discord: legomaster_01
+Discord: `legomaster_01`
 
 Support Server: https://discord.gg/
 
 Email: contact@llegonetwork.dev
 
 ## Legal
-License: Included in this repository
+License: https://LegoLandon7/StatsBot/LICENSE
 
 Terms of Service: https://llegonetwork.dev/tos
 
