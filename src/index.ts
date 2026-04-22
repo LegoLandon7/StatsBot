@@ -6,6 +6,9 @@ import * as dotenv from "dotenv";
 
 import { runLog, errorLog, log } from "./utils/logger.js";
 import interactionCreateHandler from "./handlers/interactionCreate.js";
+import messageCreateHandler from "./handlers/messageCreate.js";
+import voiceStateUpdateHandler from "./handlers/voiceStateUpdate.js";
+import { startFlushInterval } from "./stats/statsFlush.js";
 
 import fs from "fs";
 import path from "path";
@@ -21,7 +24,8 @@ export const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMembers,
-        GatewayIntentBits.MessageContent
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildVoiceStates
     ]
 });
 
@@ -44,6 +48,9 @@ for (const file of commandFiles) {
 
 // handlers
 interactionCreateHandler(client, commands);
+messageCreateHandler(client);
+voiceStateUpdateHandler(client);
+startFlushInterval();
 
 // login
 client.login(process.env.BOT_TOKEN).catch((error) => {

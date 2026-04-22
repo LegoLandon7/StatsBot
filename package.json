@@ -5,11 +5,18 @@
   "main": "index.js",
   "id": "fixedscripts",
   "scripts": {
-    "dev": "tsx src/deployers/deploy.ts src/index.ts",
-    "deploy": "tsx src/deployers/deploy.ts",
-    "build": "tsc",
-    "start": "node dist/index.js"
-  },
+  "dev": "tsx src/dev.ts",
+
+  "build": "tsc",
+
+  "start": "node dist/index.js",
+
+  "init-db": "tsx src/db/database.ts",
+
+  "deploy": "tsx src/deployers/deploy.ts",
+
+  "view-db": "tsx src/db/view.ts"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LegoLandon7/StatsBot.git"
@@ -23,11 +30,13 @@
   },
   "homepage": "https://github.com/LegoLandon7/StatsBot#readme",
   "dependencies": {
+    "better-sqlite3": "^12.9.0",
     "chalk": "^5.6.2",
     "discord.js": "^14.26.2",
     "dotenv": "^17.4.2"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^25.6.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0",

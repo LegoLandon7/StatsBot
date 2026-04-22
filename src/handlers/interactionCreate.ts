@@ -1,3 +1,6 @@
+// interactionCreate.ts
+// handles all interaction create events
+
 import { Client, Interaction } from "discord.js";
 import { errorLog } from "../utils/logger.js";
 
@@ -14,7 +17,7 @@ export default function interactionCreateHandler(
         try {
             await command.execute(interaction);
         } catch (err) {
-            errorLog(err, "command error");
+            errorLog(err, `command error: ${interaction.commandName}`);
 
             // error reply
             if (interaction.replied || interaction.deferred) {

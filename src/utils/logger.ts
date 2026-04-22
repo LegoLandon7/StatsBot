@@ -23,3 +23,17 @@ export function errorLog(error: unknown, ...args: any[]) { console.error(
     chalk.gray('-'),
     chalk.red(error)
 );}
+
+export function dataLog(...args: any[]) { console.log(
+    chalk.gray(`[${time()}]`),
+    chalk.cyan(`[DATA]`),
+    chalk.cyan(...args),
+);}
+
+export function tableLog(label: string, data: any[]) { console.log(
+    chalk.gray(`[${time()}]`),
+    chalk.magenta(`[TABLE]`),
+    chalk.magenta(label)
+);
+    console.table(data);
+}

@@ -19,7 +19,7 @@ const __dirname  = path.dirname(__filename);
 
 // load commands
 const commands: any[] = [];
-const commandsPath = path.join(__dirname, "commands");
+const commandsPath = path.join(__dirname, "../commands");
 const commandFiles = fs.readdirSync(commandsPath);
 
 for (const file of commandFiles) {

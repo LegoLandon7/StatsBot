@@ -8,5 +8,5 @@ export const data = new SlashCommandBuilder()
     .setDescription("gets StatsBot's latency")
 
 export async function execute(interaction: any) {
-    await interaction.reply("pong");
+    await interaction.reply("pong!");
 }
