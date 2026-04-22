@@ -1,6 +1,3 @@
-// messageCreate.ts
-// handles all message create events
-
 import { Client, Message } from "discord.js";
 import { errorLog } from "../utils/logger.js";
 import { incrementGuild } from "../stats/statsCache.js";

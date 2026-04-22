@@ -1,22 +1,16 @@
 {
   "name": "statsbot",
   "version": "1.0.0",
-  "description": "A discord bot to view and track stats of guilds and users",
-  "main": "index.js",
-  "id": "fixedscripts",
+  "description": "Discord bot for tracking guild and user statistics",
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-  "dev": "tsx src/dev.ts",
-
-  "build": "tsc",
-
-  "start": "node dist/index.js",
-
-  "init-db": "tsx src/db/database.ts",
-
-  "deploy": "tsx src/deployers/deploy.ts",
-
-  "view-db": "tsx src/db/view.ts"
-},
+    "dev": "tsx src/dev.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "deploy": "tsx src/deployers/deploy.ts",
+    "view-db": "tsx src/db/view.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LegoLandon7/StatsBot.git"
@@ -24,7 +18,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/LegoLandon7/StatsBot/issues"
   },

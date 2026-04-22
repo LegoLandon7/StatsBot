@@ -1,6 +1,3 @@
-// statsFlush.ts
-// flushes current stored stats
-
 import db from "../db/database.js";
 import { drainMessageCache, drainVCCache } from "./statsCache.js";
 

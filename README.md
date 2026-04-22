@@ -51,8 +51,7 @@ This will deploy commands, initialize the database, and start the bot.
 - `npm run build` - Compile TypeScript to JavaScript
 - `npm run start` - Run compiled bot
 - `npm run deploy` - Deploy slash commands
-- `npm run init-db` - Initialize database
-- `npm run view-db` - Display current database tables
+- `npm run view-db` - Display database tables
 
 ## Database Schema
 

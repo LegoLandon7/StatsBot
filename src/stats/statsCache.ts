@@ -1,6 +1,3 @@
-// statsCache.ts
-// caches current stats to memory
-
 interface MessageBucket { MESSAGE_COUNT: number; }
 
 const messageCache = new Map<string, Map<string, Map<number, MessageBucket>>>();

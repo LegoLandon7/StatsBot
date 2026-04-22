@@ -1,13 +1,7 @@
-// interactionCreate.ts
-// handles all interaction create events
-
 import { Client, Interaction } from "discord.js";
 import { errorLog } from "../utils/logger.js";
 
-export default function interactionCreateHandler(
-    client: Client,
-    commands: Map<string, any>
-    ) {
+export default function interactionCreateHandler(client: Client, commands: Map<string, any>) {
     client.on("interactionCreate", async (interaction: Interaction) => {
         if (!interaction.isChatInputCommand()) return;
 
@@ -19,7 +13,6 @@ export default function interactionCreateHandler(
         } catch (err) {
             errorLog(err, `command error: ${interaction.commandName}`);
 
-            // error reply
             if (interaction.replied || interaction.deferred) {
                 await interaction.followUp({
                     content: "There was an error executing this command.",

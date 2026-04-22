@@ -1,6 +1,3 @@
-// view.ts
-// view the tables as they are
-
 import db from "./database.js"
 import { tableLog } from "../utils/logger.js"
 

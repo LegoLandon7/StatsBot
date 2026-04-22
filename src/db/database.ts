@@ -1,15 +1,11 @@
-// database.ts
-// initialize database
-
 import Database from "better-sqlite3";
-import { errorLog, log, runLog } from "../utils/logger.js";
+import { log, runLog } from "../utils/logger.js";
 
 const db = new Database('src/data/stats.db');
 
 log('creating tables...');
 
 db.exec(`
-    
     CREATE TABLE IF NOT EXISTS MESSAGE_STATS (
         GUILD_ID TEXT NOT NULL,
         USER_ID TEXT NOT NULL,
